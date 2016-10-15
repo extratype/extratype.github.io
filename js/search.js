@@ -67,6 +67,9 @@
                     title: post.title,
                     path: post.path,
                     date: new Date(post.date).toLocaleDateString(),
+                    categories: post.categories.map(function(category) {
+                        return '/' + category.name;
+                    }).join(''),
                     tags: post.tags.map(function(tag) {
                         return '<span>#' + tag.name + '</span>';
                     }).join('')

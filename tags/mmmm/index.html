@@ -63,7 +63,7 @@
       
           <li class="waves-block waves-effect">
             <a href="/categories"  >
-              <i class="icon icon-lg icon-categories"></i>
+              <i class="icon icon-lg icon-folder-open"></i>
               Categories
             </a>
           </li>
@@ -108,7 +108,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="Keyword">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -156,6 +156,11 @@
       <a class="post-title-link" href="/2016/10/09/test/">test</a>
     </h3>
   
+
+
+
+    
+	<a class="article-category-link" href="/categories/math/"><div class='article-category-separator'>/</div>math</a><a class="article-category-link" href="/categories/math/test/"><div class='article-category-separator'>/</div>test</a>
 
 
 
@@ -234,10 +239,13 @@ var BLOG_SHARE = {
     <a href="/{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
+            <time class="time">{date}</time>
+            <div class="categories ellipsis">
+                {categories}
+            </div>
             <div class="tags ellipsis">
                 {tags}
             </div>
-            <time class="flex-col time">{date}</time>
         </div>
     </a>
 </li>

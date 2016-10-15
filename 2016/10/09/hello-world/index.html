@@ -67,7 +67,7 @@ Quick">
       
           <li class="waves-block waves-effect">
             <a href="/categories"  >
-              <i class="icon icon-lg icon-categories"></i>
+              <i class="icon icon-lg icon-folder-open"></i>
               Categories
             </a>
           </li>
@@ -112,7 +112,7 @@ Quick">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="Keyword">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -212,7 +212,7 @@ Quick">
             
             <blockquote>
                 <p>
-                本文地址：
+                Link:
                 <a href="https://extratype.github.io/2016/10/09/hello-world/" target="_blank" rel="external">https://extratype.github.io/2016/10/09/hello-world/</a>
                 </p>
                 <footer><cite><a href="https://extratype.github.io">@extratype's blog</a></cite></footer>
@@ -314,10 +314,13 @@ var BLOG_SHARE = {
     <a href="/{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
+            <time class="time">{date}</time>
+            <div class="categories ellipsis">
+                {categories}
+            </div>
             <div class="tags ellipsis">
                 {tags}
             </div>
-            <time class="flex-col time">{date}</time>
         </div>
     </a>
 </li>
