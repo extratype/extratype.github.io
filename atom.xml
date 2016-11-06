@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://extratype.github.io/"/>
-  <updated>2016-11-06T02:00:14.653Z</updated>
+  <updated>2016-11-06T12:46:32.657Z</updated>
   <id>https://extratype.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://extratype.github.io/2016/10/22/Rust-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85/"/>
     <id>https://extratype.github.io/2016/10/22/Rust-개발-환경-세팅/</id>
     <published>2016-10-22T03:47:41.000Z</published>
-    <updated>2016-11-06T02:00:14.653Z</updated>
+    <updated>2016-11-06T12:46:32.657Z</updated>
     
     <content type="html"><![CDATA[<p>나의 Rust 개발 환경을 정리해서 적어둔다.</p>
 <ul>
@@ -90,7 +90,7 @@
     <link href="https://extratype.github.io/2016/10/16/MSYS2-Git-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/"/>
     <id>https://extratype.github.io/2016/10/16/MSYS2-Git-사용하기/</id>
     <published>2016-10-15T15:59:55.000Z</published>
-    <updated>2016-10-15T17:00:12.000Z</updated>
+    <updated>2016-11-06T12:46:32.655Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Windows에서-Git-사용하기"><a href="#Windows에서-Git-사용하기" class="headerlink" title="Windows에서 Git 사용하기"></a>Windows에서 Git 사용하기</h2><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git for Windows</a>를 설치하면 자체 MSYS2 환경도 같이 설치된다. Git Bash가 바로 이 환경에서 동작한다.</p>
 <p>이미 <a href="https://msys2.github.io/" target="_blank" rel="external">MSYS2</a>를 설치했다면 기존 MSYS2 환경에 덮어서 설치할 수 <a href="https://github.com/git-for-windows/git/wiki/Install-inside-MSYS2-proper" target="_blank" rel="external">있다</a>. 이 <a href="https://github.com/git-for-windows/git/issues/284" target="_blank" rel="external">issue</a>에 따르면 두 환경이 아직 통합되지 않은 것 같다.</p>
