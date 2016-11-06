@@ -1,0 +1,3 @@
+[submodule "themes/indigo"]
+	path = themes/indigo
+	url = git@github.com:extratype/hexo-theme-indigo.git
