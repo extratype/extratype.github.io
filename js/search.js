@@ -118,6 +118,7 @@
     searchIco.addEventListener('click', function() {
         searchWrap.classList.toggle('in');
         keyInput.value = '';
+        keyInput.focus();
     });
 
     back.addEventListener('click', function() {

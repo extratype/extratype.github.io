@@ -28,7 +28,7 @@ MSYS2 + rustup
 Rust stable x86_64 GNU ABI
 
 MSYS2 설치하기리눅스스러운 환경을 구축하고 MinGW GCC 툴체인을 쓰기 위해서 MSYS2를 먼저 설치한다. Rust와 GCC를 함께 설치할 수도 있지만 문제가 있어 따로 설치한다. MSYS2 인스톨러">
-<meta property="og:updated_time" content="2016-10-22T07:37:53.000Z">
+<meta property="og:updated_time" content="2016-11-06T02:00:14.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rust 개발 환경 세팅">
 <meta name="twitter:description" content="나의 Rust 개발 환경을 정리해서 적어둔다.
@@ -107,7 +107,7 @@ MSYS2 설치하기리눅스스러운 환경을 구축하고 MinGW GCC 툴체인�
   <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
   <p>extratype&#39;s blog &copy; 2016</p>
   <p>Generator <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
-  <a href="https://github.com/extratype/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="https://github.com/extratype/hexo-theme-indigo" target="_blank">Indigo</a></p>
   <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
 
@@ -185,7 +185,7 @@ MSYS2 설치하기리눅스스러운 환경을 구축하고 MinGW GCC 툴체인�
 <p><code>msys2_shell.cmd</code> 스크립트를 돌려서 MSYS2나 MinGW-w64 환경 쉘을 띄울 수 있다. <code>-where</code> 옵션을 주면 작업 디렉토리를 지정할 수 있다. 다른 옵션은 스크립트 파일을 참고하기 바란다. 탐색기의 컨텍스트 메뉴에 MSYS2 쉘을 추가하려면 <a href="https://github.com/njzhangyifei/msys2-mingw-shortcut-menus" target="_blank" rel="external">여기</a>를 참고.</p>
 <p>MSYS2 환경은 윈도우와 독립된 POSIX 환경처럼 보이는데, 실제로는 MSYS2 툴체인으로 컴파일된(MSYS2 DLL을 사용하는) 프로그램에 한해서 그러하다. MinGW-w64 툴체인으로 컴파일된 프로그램들은 MSYS2 DLL을 거치지 않고 native로 동작한다. 이런 이유로 MSYS2를 분리된 POSIX 개발 환경으로 꾸밀 수는 없다.</p>
 <p>나는 아예 윈도우와 MSYS2 환경을 통합해서 사용하기로 결정했다. <code>PATH</code> 환경 변수에 <code>C:\msys64\mingw64\bin</code>과 <code>C:\msys64\usr\bin</code>을 순서대로 추가한다. 단, 충돌을 방지하기 위해 <code>%SystemRoot%\system32</code> 보다 아래에 둔다. MSYS2 쉘에서 다른 윈도우용 툴들을 쓰기 위해 <code>msys2_shell.cmd</code>에서 <code>MSYS2_PATH_TYPE=inherit</code>를 설정한다. 이렇게 하면 MSYS2 쉘에서는 MSYS2 바이너리들을 <code>system32</code> 바이너리보다 우선하되 다른 툴들도 사용할 수 있게 된다.</p>
-<h2 id="Rust-설치하기"><a href="#Rust-설치하기" class="headerlink" title="Rust 설치하기"></a>Rust 설치하기</h2><p>인스톨러보다 Rust 툴체인 관리가 편해지는 <a href="https://www.rustup.rs/" target="_blank" rel="external">rustup</a>을 권장한다. 인스톨러로 Rust를 설치해도 되는데 MSYS2와 같이 쓰려면 ‘Linker and platform libraries’ 옵션을 해제하고 설치하면 된다. rustup으로 Rust를 설치하면 최소한의 MinGW 툴체인이 같이 설치되며 제거할 수 있는 옵션이 아직 없다. 임시방편으로 이렇게 제거하면 된다.</p>
+<h2 id="Rust-설치하기"><a href="#Rust-설치하기" class="headerlink" title="Rust 설치하기"></a>Rust 설치하기</h2><p>인스톨러보다 Rust 툴체인 관리가 편해지는 <a href="https://www.rustup.rs/" target="_blank" rel="external">rustup</a>을 권장한다. 인스톨러로 Rust를 설치해도 되는데 MSYS2와 같이 쓰려면 ‘Linker and platform libraries’ 옵션을 해제하고 설치하면 된다. rustup으로 Rust를 설치하면 최소한의 MinGW 툴체인이 같이 설치되며 제거할 수 있는 옵션이 아직 <a href="https://github.com/rust-lang-nursery/rustup.rs/issues/718" target="_blank" rel="external">없다</a>. 임시방편으로 이렇게 제거하면 된다.</p>
 <ol>
 <li>MinGW 툴체인이 설치된 디렉토리(예: <code>%USERPROFILE%\.multirust\toolchains\stable-x86_64-pc-windows-gnu\lib\rustlib\x86_64-pc-windows-gnu</code>)로 이동한다.</li>
 <li><code>bin</code> 폴더의 이름을 <code>bin~</code>로 바꾼다.</li>
@@ -259,6 +259,7 @@ MSYS2 설치하기리눅스스러운 환경을 구축하고 MinGW GCC 툴체인�
 
     </div>
 </article>
+
     </div>
   </main>
 <div class="mask" id="mask"></div>
@@ -307,8 +308,6 @@ var BLOG_SHARE = {
       </li>
     </ul>
  </div>
-
-
 
 
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
