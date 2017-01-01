@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>수학의 기초 | extratype&#39;s blog | coding, math, etc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#009688">
+  
+  
+  <meta name="keywords" content="">
+  <meta name="description" content="집합과 명제를 왜 배울까?모든 수학적 대상은 집합으로 표현된다.수학적 대상을 연결짓는 논리는 명제로 되어 있다.수학의 모든 것은 기호로 표현될 수 있는 명제와 집합에 기반한다.수학의 언어를 이해하고 표현하는 법을 익히면 수학적으로 사고할 수 있다.
+수학2 집합과 명제https://namu.wiki/w/%EC%88%98%ED%95%99%E2%85%A1http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="수학의 기초">
+<meta property="og:url" content="https://extratype.github.io/2016/11/27/수학의-기초/index.html">
+<meta property="og:site_name" content="extratype's blog">
+<meta property="og:description" content="집합과 명제를 왜 배울까?모든 수학적 대상은 집합으로 표현된다.수학적 대상을 연결짓는 논리는 명제로 되어 있다.수학의 모든 것은 기호로 표현될 수 있는 명제와 집합에 기반한다.수학의 언어를 이해하고 표현하는 법을 익히면 수학적으로 사고할 수 있다.
+수학2 집합과 명제https://namu.wiki/w/%EC%88%98%ED%95%99%E2%85%A1http">
+<meta property="og:updated_time" content="2016-11-27T05:59:28.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="수학의 기초">
+<meta name="twitter:description" content="집합과 명제를 왜 배울까?모든 수학적 대상은 집합으로 표현된다.수학적 대상을 연결짓는 논리는 명제로 되어 있다.수학의 모든 것은 기호로 표현될 수 있는 명제와 집합에 기반한다.수학의 언어를 이해하고 표현하는 법을 익히면 수학적으로 사고할 수 있다.
+수학2 집합과 명제https://namu.wiki/w/%EC%88%98%ED%95%99%E2%85%A1http">
+  
+    <link rel="alternative" href="/atom.xml" title="extratype&#39;s blog" type="application/atom+xml">
+  
+  <meta name="summary" content="coding, math, etc.">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">extratype</h5>
+        <a href="mailto:extratype@gmail.com" title="extratype@gmail.com" class="mail">extratype@gmail.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <div class="scroll-wrap flex-col">
+    <ul class="nav">
+      
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              Home
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              Archives
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/categories"  >
+              <i class="icon icon-lg icon-folder-open"></i>
+              Categories
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              Tags
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/extratype" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
+    </ul>
+
+    <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>extratype&#39;s blog &copy; 2016</p>
+  <p>Generator <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/extratype/hexo-theme-indigo" target="_blank">Indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+  </div>
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">수학의 기초</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="Keyword">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">수학의 기초</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2016-11-27T05:49:22.000Z" itemprop="datePublished" class="page-time">
+  2016-11-27
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-수학의-기초" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#논리"><span class="post-toc-number">1.</span> <span class="post-toc-text">논리</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#명제"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">명제</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#논리-1"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">논리</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#명제-논리"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">명제 논리</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#술어-논리-1차-논리"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">술어 논리 / 1차 논리</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2차-논리-고차-논리"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">2차 논리 / 고차 논리</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#괴델의-불완전성-정리"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">괴델의 불완전성 정리</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#집합"><span class="post-toc-number">2.</span> <span class="post-toc-text">집합</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#집합의-정의"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">집합의 정의</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#공리적-집합론-axiomatic-set-theory"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">공리적 집합론(axiomatic set theory)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#소박한-집합론-naive-set-theory"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">소박한 집합론(naive set theory)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#러셀의-역설"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">러셀의 역설</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#자연수"><span class="post-toc-number">3.</span> <span class="post-toc-text">자연수</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#정수"><span class="post-toc-number">4.</span> <span class="post-toc-text">정수</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#유리수"><span class="post-toc-number">5.</span> <span class="post-toc-text">유리수</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#실수"><span class="post-toc-number">6.</span> <span class="post-toc-text">실수</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Ordinals"><span class="post-toc-number">7.</span> <span class="post-toc-text">Ordinals</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#수학기초론-Foundations-of-mathematics"><span class="post-toc-number">8.</span> <span class="post-toc-text">수학기초론 Foundations of mathematics</span></a></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p>집합과 명제를 왜 배울까?<br>모든 수학적 대상은 집합으로 표현된다.<br>수학적 대상을 연결짓는 논리는 명제로 되어 있다.<br>수학의 모든 것은 기호로 표현될 수 있는 명제와 집합에 기반한다.<br>수학의 언어를 이해하고 표현하는 법을 익히면 수학적으로 사고할 수 있다.</p>
+<p>수학2 집합과 명제<br><a href="https://namu.wiki/w/%EC%88%98%ED%95%99%E2%85%A1" target="_blank" rel="external">https://namu.wiki/w/%EC%88%98%ED%95%99%E2%85%A1</a><br><a href="https://librewiki.net/wiki/%EC%8B%9C%EB%A6%AC%EC%A6%88:%EC%88%98%ED%8F%AC%EC%9E%90%EB%8F%84_%EC%89%BD%EA%B2%8C_%EC%95%8C_%EC%88%98_%EC%9E%88%EB%8A%94_%EC%88%98%ED%95%99/%EC%A7%91%ED%95%A9%EA%B3%BC_%EB%AA%85%EC%A0%9C" target="_blank" rel="external">https://librewiki.net/wiki/%EC%8B%9C%EB%A6%AC%EC%A6%88:%EC%88%98%ED%8F%AC%EC%9E%90%EB%8F%84_%EC%89%BD%EA%B2%8C_%EC%95%8C_%EC%88%98_%EC%9E%88%EB%8A%94_%EC%88%98%ED%95%99/%EC%A7%91%ED%95%A9%EA%B3%BC_%EB%AA%85%EC%A0%9C</a><br>집합론은 수학의 논리 단위인 명제와 수학적 대상이 추상화된 개념인 집합에 대하여 다<br>루는 수학의 한 분야이다. 오늘날 수학의 모든 내용은 명제와 집합으로서 표현된다. 따<br>라서 수학의 한 분야를 학습하기에 앞서 집합론을 살펴보는 것은 앞으로 학습 전반에<br>걸쳐 사용될 추론 규칙과 여러 가지 기호를 약속하는 것으로서 의의가 있다 - 맛있는 해석학 2판</p>
+<p>겉핥기 + 주관</p>
+<h2 id="논리"><a href="#논리" class="headerlink" title="논리"></a>논리</h2><h3 id="명제"><a href="#명제" class="headerlink" title="명제"></a>명제</h3><p><a href="https://en.wikipedia.org/wiki/Proposition#Treatment_in_logic" target="_blank" rel="external">https://en.wikipedia.org/wiki/Proposition#Treatment_in_logic</a><br>진리값을 갖는, 의미가 명백한 문장이다. <a href="https://en.wikipedia.org/wiki/Sentence_(mathematical_logic" target="_blank" rel="external">https://en.wikipedia.org/wiki/Sentence_(mathematical_logic</a>)</p>
+<p>참이나 거짓을 진리값이라 한다. <a href="https://en.wikipedia.org/wiki/Truth_value" target="_blank" rel="external">https://en.wikipedia.org/wiki/Truth_value</a><br>진리값은 단 두 종류밖에 없으므로 명제의 진리값 역시 그러하다. 예를 들어,</p>
+<ul>
+<li>명제는 참이면서 동시에 거짓이지 않다.</li>
+<li>명제가 참이 아니면 거짓이다.</li>
+</ul>
+<p>명제가 참 또는 거짓임을 증명하는 것은 별개이다. 명제를 증명할 수 없다 하여 명제의 진리값이 없다고 표현하지는 않는다. 이런 경우엔 명제를 참으로 받아들이느냐 거짓으로 받아들이느냐에 따라 다른 이론이 전개된다.</p>
+<p>명제는 누가 보아도 그 의미가 애매하지 않고 누구에게나 똑같이 받아들여져야 한다. 그래서 명백할 수 밖에 없는 단순한 것들을 정해진 규칙에 따라 연결하여 명제를 만들고, 그것들만을 명제로 본다. 즉 명제는 기계적으로 해석하는 것이 가능하다. 오히려 사람이 명제를 해석하기 위해 기계적으로 사고하는 법을 익혀야 할 정도다.</p>
+<p>(예) $\forall$ x \in \mathbb R : x &gt;= -1 \Rightarrow x^2 + 2x &gt;= -1<br>     \in, \mathbb R, &gt;=, -1, \Rightarrow, *, +, 2 모두 정의되어야 함</p>
+<h3 id="논리-1"><a href="#논리-1" class="headerlink" title="논리"></a>논리</h3><p>논리란 명제를 추론할 수 있게 하는 형식 체계이다. <a href="https://en.wikipedia.org/wiki/Formal_system" target="_blank" rel="external">https://en.wikipedia.org/wiki/Formal_system</a></p>
+<p>명제가 가지는 구체적인 의미에 연연하지 않고, 명제들을 연결하여 어떻게 다른 명제를 추론할 수 있는지 기호와 추론 규칙만으로 나타낸 체계이다.</p>
+<p>명제의 의미는 모형으로 정의된다. 모형이 명제의 진리값을 결정하며 <a href="https://en.wikipedia.org/wiki/Structure_(mathematical_logic" target="_blank" rel="external">https://en.wikipedia.org/wiki/Structure_(mathematical_logic</a>)<br>논리로 추론한 명제가 모두 참이면 안전한 논리,<br>모든 참인 명제를 논리로 추론할 수 있으면 완전한 논리라고 한다<br>(예) 페아노 공리계 vs. 자연수</p>
+<p>모든 수학적인 명제들을 기계적으로 증명해보려는 시도에서 나왔다.</p>
+<h4 id="명제-논리"><a href="#명제-논리" class="headerlink" title="명제 논리"></a>명제 논리</h4><p><a href="https://en.wikipedia.org/wiki/Propositional_calculus" target="_blank" rel="external">https://en.wikipedia.org/wiki/Propositional_calculus</a></p>
+<p>명제 논리는 아래 네 가지로 구성된다. <a href="https://en.wikipedia.org/wiki/Propositional_calculus#Generic_description_of_a_propositional_calculus" target="_blank" rel="external">https://en.wikipedia.org/wiki/Propositional_calculus#Generic_description_of_a_propositional_calculus</a></p>
+<ol>
+<li>명제를 나타내는 기호 </li>
+<li>명제를 연결하는 연산자 </li>
+<li>참으로 받아들이는 공리</li>
+<li>명제를 추론할 수 있는 규칙</li>
+</ol>
+<p>간단한 예<br>    (예) 알파벳<br>    (예) \lnot, \land, \lor, \to, …<br>        <a href="https://en.wikipedia.org/wiki/Well-formed_formula" target="_blank" rel="external">https://en.wikipedia.org/wiki/Well-formed_formula</a><br>        <a href="https://ko.wikipedia.org/wiki/논리식" target="_blank" rel="external">https://ko.wikipedia.org/wiki/논리식</a><br>    (예) Modus ponens {p, p \to q} \vdash q</p>
+<p><a href="http://www.aistudy.co.kr/logic/wff.htm" target="_blank" rel="external">http://www.aistudy.co.kr/logic/wff.htm</a><br><a href="https://www.math.snu.ac.kr/~hichoi/infomath/Unit4/Reference_Article/PropositionalCalculus.pdf" target="_blank" rel="external">https://www.math.snu.ac.kr/~hichoi/infomath/Unit4/Reference_Article/PropositionalCalculus.pdf</a></p>
+<p>진리표에 의한 추론<br>불 대수</p>
+<h4 id="술어-논리-1차-논리"><a href="#술어-논리-1차-논리" class="headerlink" title="술어 논리 / 1차 논리"></a>술어 논리 / 1차 논리</h4><p><a href="https://en.wikipedia.org/wiki/First-order_logic" target="_blank" rel="external">https://en.wikipedia.org/wiki/First-order_logic</a><br>한정자를 사용할 수 있는 명제 논리이다.<br>1차 논리에서는 개체에 한정자를 둘 수 있다.<br>    변수 기호<br>    전칭 기호 또는 존재 기호<br>    등호<br>    기호에 대한 관계 기호<br>        1항 관계를 술어라 한다<br>    기호에 대한 함수 기호<br>        0항 함수를 상수라 한다</p>
+<p>한정자에 대한 추론 규칙</p>
+<h4 id="2차-논리-고차-논리"><a href="#2차-논리-고차-논리" class="headerlink" title="2차 논리 / 고차 논리"></a>2차 논리 / 고차 논리</h4><p>2차 논리에서는 개체의 집합(술어)에 한정자를 둘 수 있다.</p>
+<p><a href="https://en.wikipedia.org/wiki/Second-order_logic" target="_blank" rel="external">https://en.wikipedia.org/wiki/Second-order_logic</a><br><a href="https://en.wikipedia.org/wiki/Higher-order_logic" target="_blank" rel="external">https://en.wikipedia.org/wiki/Higher-order_logic</a></p>
+<h4 id="괴델의-불완전성-정리"><a href="#괴델의-불완전성-정리" class="headerlink" title="괴델의 불완전성 정리"></a>괴델의 불완전성 정리</h4><p><a href="https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems" target="_blank" rel="external">https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems</a></p>
+<h2 id="집합"><a href="#집합" class="headerlink" title="집합"></a>집합</h2><h3 id="집합의-정의"><a href="#집합의-정의" class="headerlink" title="집합의 정의"></a>집합의 정의</h3><p>명확하고 서로 다른 대상(object)의 모임<br>대상 각각을 원소로 칭한다<br><a href="https://en.wikipedia.org/wiki/Set_(mathematics" target="_blank" rel="external">https://en.wikipedia.org/wiki/Set_(mathematics</a>)<br><a href="https://ko.wikipedia.org/wiki/%EC%A7%91%ED%95%A9" target="_blank" rel="external">https://ko.wikipedia.org/wiki/%EC%A7%91%ED%95%A9</a><br>칸토르는 집합을 ‘우리의 직관 또는 사고의 대상으로서 서로 뚜렷이 구분되는 원소의 전체인 하나의 모임’이라고 정의하였다. 이러한 정의에 의한 집합론은 몇 가지 역리를 함의하게 된다 - 맛있는 해석학 2판</p>
+<p>명확하다? 기계도 할 수 있다, 수학적 기호만으로 표현할 수 있다<br>다르다? 원소도 집합이므로 axiom of extensionality 적용</p>
+<h4 id="공리적-집합론-axiomatic-set-theory"><a href="#공리적-집합론-axiomatic-set-theory" class="headerlink" title="공리적 집합론(axiomatic set theory)"></a>공리적 집합론(axiomatic set theory)</h4><p>공리적 집합론에선 집합을 정의하지 않은 채로 둔다(primitive notion, 무정의 용어)<br>증명 없이 받아들이는 명제인 공리와 같이, 더 이상 다른 용어들로 정의하지 않는 것이다<br>집합의 성질들은 공리로 설명되며 여기서부터 논리를 전개할 수 있다<br><a href="https://en.wikipedia.org/wiki/Primitive_notion" target="_blank" rel="external">https://en.wikipedia.org/wiki/Primitive_notion</a><br><a href="https://ko.wikipedia.org/wiki/%EB%AC%B4%EC%A0%95%EC%9D%98_%EC%9A%A9%EC%96%B4" target="_blank" rel="external">https://ko.wikipedia.org/wiki/%EB%AC%B4%EC%A0%95%EC%9D%98_%EC%9A%A9%EC%96%B4</a><br><a href="https://en.wikipedia.org/wiki/Set_theory#Axiomatic_set_theory" target="_blank" rel="external">https://en.wikipedia.org/wiki/Set_theory#Axiomatic_set_theory</a></p>
+<p>ZFC(Zermelo–Fraenkel set theory + Axiom of Choice)<br>    <a href="https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory" target="_blank" rel="external">https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory</a><br>    <a href="https://namu.wiki/w/ZFC%20%EA%B3%B5%EB%A6%AC%EA%B3%84?from=ZFC" target="_blank" rel="external">https://namu.wiki/w/ZFC%20%EA%B3%B5%EB%A6%AC%EA%B3%84?from=ZFC</a><br>    <a href="https://en.wikipedia.org/wiki/Axiom_of_choice" target="_blank" rel="external">https://en.wikipedia.org/wiki/Axiom_of_choice</a></p>
+<p>Axiom schema of separation<br>    logical sentence in the language of ZFC (equality, set membership)<br>        equality replaced by membership<br>        sentence in first order logic</p>
+<pre><code>* Not finite https://en.wikipedia.org/wiki/Axiom_schema#Finite_axiomatization
+</code></pre><p>명제를 집합으로 환원 -&gt; Axiom schema of separation<br><a href="http://sciphy.tistory.com/1356" target="_blank" rel="external">http://sciphy.tistory.com/1356</a></p>
+<p>집합론 site:proofmood.com<br><a href="http://proofmood.com/docs/set_1_phone.pdf" target="_blank" rel="external">http://proofmood.com/docs/set_1_phone.pdf</a></p>
+<p>수학기초론 <a href="http://pakebi.com/suhak/" target="_blank" rel="external">http://pakebi.com/suhak/</a></p>
+<p><a href="https://www.google.co.kr/search?q=논리식+formula+명제+sentence" target="_blank" rel="external">https://www.google.co.kr/search?q=논리식+formula+명제+sentence</a><br><a href="https://www.google.co.kr/search?q=논리식+명제" target="_blank" rel="external">https://www.google.co.kr/search?q=논리식+명제</a></p>
+<h4 id="소박한-집합론-naive-set-theory"><a href="#소박한-집합론-naive-set-theory" class="headerlink" title="소박한 집합론(naive set theory)"></a>소박한 집합론(naive set theory)</h4><p>형식언어가 아닌 자연어로 표현한 집합론<br><a href="https://en.wikipedia.org/wiki/Naive_set_theory" target="_blank" rel="external">https://en.wikipedia.org/wiki/Naive_set_theory</a><br><a href="https://ko.wikipedia.org/wiki/%EC%86%8C%EB%B0%95%ED%95%9C_%EC%A7%91%ED%95%A9%EB%A1%A0" target="_blank" rel="external">https://ko.wikipedia.org/wiki/%EC%86%8C%EB%B0%95%ED%95%9C_%EC%A7%91%ED%95%A9%EB%A1%A0</a></p>
+<h4 id="러셀의-역설"><a href="#러셀의-역설" class="headerlink" title="러셀의 역설"></a>러셀의 역설</h4><p>S={x|x is not in x}, S∈S?<br>전체집합은 있을 수 없다: Let U be the universal set. Then U∈U? U is not in U?<br>    DOES THE SET OF EVERYTHING CONTAIN ITSELF?<br>해결책:<br><a href="https://en.wikipedia.org/wiki/Russell&#39;s_paradox" target="_blank" rel="external">https://en.wikipedia.org/wiki/Russell&#39;s_paradox</a><br><a href="http://www.math.ups.edu/~bryans/Current/Journal_Spring_1999/JEarly_232_S99.html" target="_blank" rel="external">http://www.math.ups.edu/~bryans/Current/Journal_Spring_1999/JEarly_232_S99.html</a></p>
+<h2 id="자연수"><a href="#자연수" class="headerlink" title="자연수"></a>자연수</h2><p>God made the integers, all else is the work of man<br><a href="https://namu.wiki/w/자연수" target="_blank" rel="external">https://namu.wiki/w/자연수</a><br><a href="https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers" target="_blank" rel="external">https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers</a></p>
+<h2 id="정수"><a href="#정수" class="headerlink" title="정수"></a>정수</h2><h2 id="유리수"><a href="#유리수" class="headerlink" title="유리수"></a>유리수</h2><h2 id="실수"><a href="#실수" class="headerlink" title="실수"></a>실수</h2><p><a href="https://en.wikipedia.org/wiki/Real_number" target="_blank" rel="external">https://en.wikipedia.org/wiki/Real_number</a><br><a href="https://en.wikipedia.org/wiki/Construction_of_the_real_numbers" target="_blank" rel="external">https://en.wikipedia.org/wiki/Construction_of_the_real_numbers</a><br><a href="https://www.dpmms.cam.ac.uk/~wtg10/decimals.html" target="_blank" rel="external">https://www.dpmms.cam.ac.uk/~wtg10/decimals.html</a></p>
+<h2 id="Ordinals"><a href="#Ordinals" class="headerlink" title="Ordinals"></a>Ordinals</h2><p><a href="https://en.wikipedia.org/wiki/Von_Neumann_universe" target="_blank" rel="external">https://en.wikipedia.org/wiki/Von_Neumann_universe</a></p>
+<h2 id="수학기초론-Foundations-of-mathematics"><a href="#수학기초론-Foundations-of-mathematics" class="headerlink" title="수학기초론 Foundations of mathematics"></a>수학기초론 Foundations of mathematics</h2><p>계산과 증명<br>    Von neumann ordinal<br>    Church numeral<br>    Church-Turing thesis</p>
+<p>회로<br>불 대수<br>NAND, AND, OR, NOT<br>ALU<br>진리표<br>sum-of-products form<br>메모리 latch flip-flop<br>assignment<br>sequence<br>code</p>
+<p>집합론에 대한 공준 <a href="http://ocean.kisti.re.kr/downfile/volume/kshm/KSHSBA/2012/v25n1/KSHSBA_2012_v25n1_29.pdf" target="_blank" rel="external">http://ocean.kisti.re.kr/downfile/volume/kshm/KSHSBA/2012/v25n1/KSHSBA_2012_v25n1_29.pdf</a></p>
+
+
+            
+            
+            <blockquote>
+                <p>
+                Link:
+                <a href="https://extratype.github.io/2016/11/27/수학의-기초/" target="_blank" rel="external">https://extratype.github.io/2016/11/27/수학의-기초/</a>
+                </p>
+                <footer><cite><a href="https://extratype.github.io">@extratype's blog</a></cite></footer>
+            </blockquote>
+            </div>
+
+            <div class="post-footer flex-row flex-middle">
+                
+            </div>
+
+            
+<nav class="post-nav">
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/10/22/Rust-개발-환경-세팅/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Rust 개발 환경 세팅</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+
+
+
+        </div>
+
+
+    </div>
+</article>
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "수학의 기초",
+    pic: "/img/logo.png",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "https://extratype.github.io/2016/11/27/%EC%88%98%ED%95%99%EC%9D%98-%EA%B8%B0%EC%B4%88/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    
+    <ul class="reset share-icons">
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title="Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title="Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title="QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <time class="time">{date}</time>
+            <div class="categories ellipsis">
+                {categories}
+            </div>
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -90,9 +90,10 @@
     <link href="https://extratype.github.io/2016/10/16/MSYS2-Git-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/"/>
     <id>https://extratype.github.io/2016/10/16/MSYS2-Git-사용하기/</id>
     <published>2016-10-15T15:59:55.000Z</published>
-    <updated>2016-11-06T12:46:32.655Z</updated>
+    <updated>2017-01-01T13:03:36.340Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Windows에서-Git-사용하기"><a href="#Windows에서-Git-사용하기" class="headerlink" title="Windows에서 Git 사용하기"></a>Windows에서 Git 사용하기</h2><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git for Windows</a>를 설치하면 자체 MSYS2 환경도 같이 설치된다. Git Bash가 바로 이 환경에서 동작한다.</p>
+    <content type="html"><![CDATA[<p><strong>주의: 언급한 에러 외에도 잔버그가 여럿 있으니 권장하지 않음!!</strong></p>
+<h2 id="Windows에서-Git-사용하기"><a href="#Windows에서-Git-사용하기" class="headerlink" title="Windows에서 Git 사용하기"></a>Windows에서 Git 사용하기</h2><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git for Windows</a>를 설치하면 자체 MSYS2 환경도 같이 설치된다. Git Bash가 바로 이 환경에서 동작한다.</p>
 <p>이미 <a href="https://msys2.github.io/" target="_blank" rel="external">MSYS2</a>를 설치했다면 기존 MSYS2 환경에 덮어서 설치할 수 <a href="https://github.com/git-for-windows/git/wiki/Install-inside-MSYS2-proper" target="_blank" rel="external">있다</a>. 이 <a href="https://github.com/git-for-windows/git/issues/284" target="_blank" rel="external">issue</a>에 따르면 두 환경이 아직 통합되지 않은 것 같다.</p>
 <p>나는 아예 MSYS2 Git(<code>git</code>)을 설치해서 사용하고 있는데, Git 공식이 아니어서 그런지 Git을 쓰는 다른 프로그램들이 오류를 뱉는 경우가 있었다. 대처법을 여기에 정리해 올린다.</p>
 <h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>Git을 쓰려고 하면 <code>ENOENT</code> 에러를 뱉는다. 관련 issue는 <a href="https://github.com/Microsoft/vscode/issues/7998" target="_blank" rel="external">여기</a>. 링크엔 Cygwin 얘기만 나오는데 MSYS2에선 아래처럼 symlink를 만들면 된다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\&gt; mklink c c:\</div></pre></td></tr></table></figure></p>
@@ -102,7 +103,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Windows에서-Git-사용하기&quot;&gt;&lt;a href=&quot;#Windows에서-Git-사용하기&quot; class=&quot;headerlink&quot; title=&quot;Windows에서 Git 사용하기&quot;&gt;&lt;/a&gt;Windows에서 Git 사용하기&lt;/h2&gt;&lt;p&gt;&lt;a hre
+      &lt;p&gt;&lt;strong&gt;주의: 언급한 에러 외에도 잔버그가 여럿 있으니 권장하지 않음!!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Windows에서-Git-사용하기&quot;&gt;&lt;a href=&quot;#Windows에서-Git-사용하기&quot; class=&quot;headerlink&quot; ti
     
     </summary>
     
