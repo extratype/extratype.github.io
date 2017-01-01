@@ -6,6 +6,8 @@ tags:
 - MSYS2
 - Git
 ---
+**주의: 언급한 에러 외에도 잔버그가 여럿 있으니 권장하지 않음!!**
+
 ## Windows에서 Git 사용하기
 [Git for Windows](https://git-for-windows.github.io/)를 설치하면 자체 MSYS2 환경도 같이 설치된다. Git Bash가 바로 이 환경에서 동작한다.
 
